@@ -14,9 +14,10 @@ const fetchButton = createElement("button", {
 
 fetchButton.addEventListener("click", async () => {
   const whisky = await getWhisky();
+  console.log(whisky);
   const card = createCard({
     title: whisky.title,
-    img_url: whisky.image_url,
+    imgSrc: whisky.img_url,
     region: whisky.region,
   });
   document.body.append(card);
